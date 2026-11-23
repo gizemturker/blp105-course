@@ -12,9 +12,9 @@
 
 **Kullandığım veritabanı:** ☐ `llm_ops`  ☑ `robot_fleet`
 
-**PR bağlantısı:** `https://github.com/gizemturker/blp105-course/pulls`
+**PR bağlantısı:** `https://github.com/gizemturker/blp105-course/pull/6`
 
-**Commit sayısı:** 3
+**Commit sayısı:** 5
 
 ---
 
@@ -66,3 +66,5 @@ Bir dahaki ödevde daha iyi yapacağım şey: Sorguları yazmadan önce veritaba
 **İmza:** ________________________
 
 ---
+
+*Doğruluk beyanı: Bu çalışmayı kendim yaptım. Kullandığım tüm yardımcı kaynakları ve yapay zeka araçlarını yukarıda beyan ettim.*
