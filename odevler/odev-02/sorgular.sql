@@ -1,4 +1,3 @@
-SQL
 -- Ödev 2, Bölüm 1: Filo soruları
 -- Ad Soyad: Kutay Berat YAKIŞIK
 -- Veritabanı: robot_fleet
