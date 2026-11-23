@@ -1,6 +1,6 @@
 # Hafta 7: E-R modeli ve normalizasyon
 
-Durum: Yakında
+Durum: Yayında
 
 > Bu hafta iki konuyu birleştiriyor: önce modeli çıkarıyoruz, sonra onu düzeltiyoruz. İkisi birlikte işlenince "neden bu tabloyu böldük" sorusunun cevabı aynı derste veriliyor.
 

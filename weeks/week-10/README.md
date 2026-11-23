@@ -1,6 +1,6 @@
 # Hafta 10: DML, transaction ve alt sorgular
 
-Durum: Yakında
+Durum: Bu hafta
 
 > Şemayı kurdun, şimdi içini dolduruyorsun. Bir de sorguları adım adım yazmayı öğreniyorsun.
 

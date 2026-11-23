@@ -1,6 +1,6 @@
 # Hafta 8: Ara sınav, mini proje sunumu
 
-Durum: Yakında
+Durum: Yayında
 
 ## Bu hafta ne oluyor
 

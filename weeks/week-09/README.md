@@ -1,6 +1,6 @@
 # Hafta 9: DDL, tablolar, anahtarlar ve kısıtlar
 
-Durum: Yakında
+Durum: Yayında
 
 > Hafta 7'de kâğıt üzerinde tasarladığın şemayı bu hafta gerçekten kuruyorsun.
 
