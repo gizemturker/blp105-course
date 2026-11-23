@@ -53,12 +53,12 @@ Bu dönem ders **12 hafta** işlenir.
 
 ## Ödevler
 
-Dönem boyunca **6 notlu ödev** var. Her ödev iki parça halinde teslim edilir:
+Dönem boyunca **2 notlu ödev** var. Her ödev iki parça halinde teslim edilir:
 
 1. **GitHub'da PR:** kendi reponda `odev-NN` branch'ini açar, çalışır, PR açar ve beni reviewer eklersin
 2. **Kâğıt rapor:** tek sayfalık raporu teslim günündeki derste elden verirsin
 
-**Sıradaki: [Ödev 1, ilk beş haftanın tamamı](weeks/week-05/odev.md). Son teslim 23 Ekim 2026 Cuma, ders saatinden önce.**
+**Sıradaki: [Ödev 2, JOIN, ERD ve normalizasyon](weeks/week-07/odev.md). Son teslim 27 Kasım 2026 Cuma, ders saatinden önce.** Ödev 1 teslim edildi.
 
 Ayrıntı: [ODEVLER.md](ODEVLER.md), notlandırma: [RUBRIK.md](RUBRIK.md), şablonlar: [templates/](templates/README.md)
 

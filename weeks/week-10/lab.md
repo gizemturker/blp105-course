@@ -28,7 +28,7 @@ Beklenen: kendi veritabanının adı ve Hafta 9'da kurduğun tablolar. Tablo yok
 
 ## Lab 1: Veri yükleme, güvenli UPDATE, RETURNING, UPSERT (30 dk)
 
-Dosya: `odevler/odev-05/dml-denemeleri.sql`
+Dosya: `denemeler/dml-denemeleri.sql`
 
 ### 1.1. `\copy` ile gerçek veri (10 dk)
 
@@ -95,7 +95,7 @@ Tahmin et: ikinci kez çalıştırırsan tabloda kaç satır olur? ______ (çal�
 
 ## Lab 2: Transaction (BEGIN, ROLLBACK, SAVEPOINT)
 
-Dosya: `odevler/odev-05/dml-denemeleri.sql` 2. bölüm
+Dosya: `denemeler/dml-denemeleri.sql` 2. bölüm
 
 ### 2.1 Bilerek yanlış UPDATE, hasarı gör, geri al (10 dk)
 

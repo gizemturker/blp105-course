@@ -65,11 +65,5 @@ Veriyi şemaya taşıma
 
 ## Ödev
 
-Bu ödev henüz açılmadı, tarihi dersinde duyurulacak. Aktif ödev: [Ödev 1](../week-05/odev.md), son teslim 23 Ekim 2026 Cuma.
+Bu haftanın ayrı bir ödevi yok. Yaptıkların final projenin parçasıdır; kendi reponda devam et.
 
-**Ödev 5: Veriyi taşıma (DML)** (100 puan). Yönerge: [odev.md](odev.md)
-
-- PR ile teslim: branch `odev-05`, reviewer **gizemturker**
-- **Kâğıt rapor Hafta 11 dersinde elden teslim edilir**
-
-Kurallar: [ODEVLER.md](../../ODEVLER.md), rubrik: [RUBRIK.md](../../RUBRIK.md)

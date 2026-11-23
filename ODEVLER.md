@@ -1,6 +1,6 @@
 # Ödevler ve Teslim Kuralları
 
-Bu derste **6 notlu ödev** var. Hepsi aynı şekilde teslim edilir: GitHub'da kendi reponda bir **pull request (PR)** açarsın, ayrıca **bir sayfalık raporu derste elden teslim edersin.**
+Bu derste **2 notlu ödev** var. Hepsi aynı şekilde teslim edilir: GitHub'da kendi reponda bir **pull request (PR)** açarsın, ayrıca **bir sayfalık raporu derste elden teslim edersin.**
 
 İki teslimin ikisi de zorunludur. PR'ı açıp raporu getirmezsen ödev eksik sayılır; raporu getirip PR açmazsan da öyle.
 
@@ -61,7 +61,7 @@ senin-repon/
 │   │   ├── bolum4.sql     gruplama ve NULL
 │   │   └── rapor.md       raporun (yazdırıp derse getireceğin)
 │   ├── odev-02/
-│   │   ├── cozumler.sql
+│   │   ├── sorgular.sql
 │   │   └── rapor.md
 │   └── ...
 └── docs/
@@ -80,7 +80,7 @@ git pull
 git checkout -b odev-01
 ```
 
-Branch adı her zaman `odev-NN` biçiminde: `odev-01`, `odev-02`, `odev-06`.
+Branch adı her zaman `odev-NN` biçiminde: `odev-01`, `odev-02`.
 
 ### Adım 2: Çalış ve commit at
 
@@ -135,27 +135,20 @@ Bir sayfa, en fazla iki. Elle doldurulacak alanlar var, bilgisayarda doldurup ya
 | Ödev | Kapsam | Konu | PR son tarihi | Rapor teslimi |
 |---|---|---|---|---|
 | **Ödev 1** | Hafta 1-5 | Algoritma, VT kavramları, SELECT/WHERE, gruplama ve NULL | **23 Ekim 2026 Cuma, ders saatinden önce** | **23 Ekim 2026, derste** |
-| Ödev 2 | Hafta 6 | JOIN | Sonra duyurulacak | Sonra duyurulacak |
-| Ödev 3 | Hafta 7 | ERD ve normalizasyon | Sonra duyurulacak | Sonra duyurulacak |
-| Ödev yok | Hafta 8 | Ara sınav haftası | | |
-| Ödev 4 | Hafta 9 | Şema kurma (DDL) | Sonra duyurulacak | Sonra duyurulacak |
-| Ödev 5 | Hafta 10 | Veriyi taşıma (DML) | Sonra duyurulacak | Sonra duyurulacak |
-| Ödev 6 | Hafta 11 | Görünüm, güvenlik, YZ bileşeni | Sonra duyurulacak | Sonra duyurulacak |
-| Final | Hafta 12 | Ana proje ve sunum | Sonra duyurulacak | Sunum günü |
+| **Ödev 2** | Hafta 6-7 | JOIN, ERD ve normalizasyon (vizenin devamı) | **27 Kasım 2026 Cuma, ders saatinden önce (09:00)** | **27 Kasım 2026, derste** |
+| Final | Hafta 12 | Ana proje (repo), rapor ve repodan bir soru | 5-17 Aralık arasında ilan edilecek | Final günü |
 
 **Ödev 1 dönemin ilk notlu ödevi ve beş haftayı birden kapsıyor.** İlk beş hafta algoritmik düşünme, veritabanı kavramları ve tek tablolu sorgularla geçti. Bu ödev dört bölümde hepsini topluyor. Repo kurulumu ödevin bir parçası değil, sadece teslim yolu; bölüm 2'de anlatılıyor.
 
 **Kural:** son commit'in, teslim günündeki **dersin başlama saatinden önce** gönderilmiş olmalı. GitHub her commit'in saatini kaydediyor. Kâğıt raporu da aynı gün derse getirirsin.
 
-**Şu anda sadece Ödev 1 aktif.** Aşağıdaki ödevlerin konuları belli ama tarihleri henüz kesinleşmedi; her biri kendi haftasının dersinde duyurulacak ve bu tabloya işlenecek. Yönergelerini şimdiden okuyabilirsin, teslim açıldığında haber veririm.
+**Dönemde iki notlu ödev var:** Ödev 1 (teslim edildi) ve Ödev 2. Gerisi final projesinin içinde.
 
 ---
 
 ## 5. Notlandırma
 
-Altı ödevin ortalaması dönem notunun **%30'unu** oluşturur (SYLLABUS.md'deki "Proje" bileşeni).
-
-**En düşük bir ödev notun atılır.** Yani altı ödevin en iyi beşi sayılır. Hastalık, yoğunluk, kötü bir hafta: bir kere olur. Ama bunu baştan harcamamanı öneririm.
+İki ödevin ortalaması dönem notunun **%20'sini** oluşturur (SYLLABUS.md'deki "Ödev" bileşeni).
 
 Her ödev 100 puan üzerinden, ayrıntılı ölçütler: **[RUBRIK.md](RUBRIK.md)**
 

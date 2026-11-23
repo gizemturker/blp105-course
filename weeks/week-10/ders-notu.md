@@ -35,7 +35,7 @@ SELECT count(*) FROM operators;  --> 10
 
 `\dt` tabloları listeler, `\d robots` tek bir tablonun sütunlarını ve kısıtlarını gösterir.
 
-**Senin projende:** Hafta 9'da kurduğun veritabanı ve `migrations/001_create_tables.sql` dosyan hazır olmalı. Tablolar yoksa dosyayı yeniden çalıştır: `psql -d benim_projem -f migrations/001_create_tables.sql` (Ödev 4'te kullandığın veritabanı adıyla).
+**Senin projende:** Hafta 9'da kurduğun veritabanı ve `migrations/001_create_tables.sql` dosyan hazır olmalı. Tablolar yoksa dosyayı yeniden çalıştır: `psql -d benim_projem -f migrations/001_create_tables.sql` (Hafta 9'da kullandığın veritabanı adıyla).
 
 ## 2. DML: veriyi eklemek, değiştirmek, silmek
 
@@ -292,7 +292,7 @@ Boş hücre (`,,`) NULL olarak yüklendi.
 
 Yükleme sırası: **ana tablo önce**, bağlı tablo sonra (FK sırayı belirler). Önce 10 satırla dene.
 
-**Senin projende:** (1) Kendi CSV'nin ilk satırlarına bak: sütun sırası şemanla aynı mı? (2) `\copy` ile yükle ve `SELECT count(*)` ile satır sayısını doğrula. (3) Bir `UPDATE` için önce `SELECT count(*)`, sonra `UPDATE`. (4) `INSERT ... RETURNING` ile bir satır ekle. (5) UPSERT: aynı anahtarlı satırı `ON CONFLICT (...) DO UPDATE` ile güncelle. Hepsini `odevler/odev-05/dml-denemeleri.sql` taslağına yaz, her komutun üstüne "ne yaptım, neden" yorumu.
+**Senin projende:** (1) Kendi CSV'nin ilk satırlarına bak: sütun sırası şemanla aynı mı? (2) `\copy` ile yükle ve `SELECT count(*)` ile satır sayısını doğrula. (3) Bir `UPDATE` için önce `SELECT count(*)`, sonra `UPDATE`. (4) `INSERT ... RETURNING` ile bir satır ekle. (5) UPSERT: aynı anahtarlı satırı `ON CONFLICT (...) DO UPDATE` ile güncelle. Hepsini `denemeler/dml-denemeleri.sql` taslağına yaz, her komutun üstüne "ne yaptım, neden" yorumu.
 
 ## 3. Transaction: ya hep ya hiç
 

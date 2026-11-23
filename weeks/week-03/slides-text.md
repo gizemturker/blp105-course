@@ -176,8 +176,8 @@ Her hafta derste bir kavram öğreniyorsun, aynı kavramı kendi projene uyguluy
 | Bileşen | Ağırlık | Ne yapacaksın? |
 |---|---|---|
 | Ara sınav | %30 | Hafta 8: kendi verinle mini proje ve sunum |
-| Proje | %30 | Her hafta commit ve lab föyü |
-| Final | %40 | Ana proje ve jüri önünde 5 dakikalık sunum |
+| Ödev | %20 | Ödevlerin ortalaması |
+| Final | %50 | Ana proje (repo), rapor ve final günü repodan sorulan soru |
 
 - **YZ kullanmak serbest:** Lab föyüne aracı ve prompt'unu yaz. Beyan zorunlu.
 - **Gerçek veri kuralı:** Her projede en az bir gerçek veri kaynağı olacak.

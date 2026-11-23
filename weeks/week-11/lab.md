@@ -145,7 +145,7 @@ Kanıt: [ ] `ls -l yedek.dump` çıktısı
 
 ## Lab 4: YZ bileşeni seçimi
 
-Dosya: `odevler/odev-06/` altında bir not dosyası
+Dosya: `ai/` klasöründe bir not dosyası
 
 ### 4.1 Üç seçenek, birini seç (10 dk)
 

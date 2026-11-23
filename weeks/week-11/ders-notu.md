@@ -597,7 +597,7 @@ SELECT count(*) AS cagri_sayisi, count(cost_usd) AS faturali FROM llm_calls;
 
 **YZ kullanım beyanı:** Bir LLM aracı kullandıysan, lab föyündeki beyan tablosuna neyi, ne için kullandığını ve çıktısını nasıl doğruladığını yaz.
 
-**Senin projende:** Üç seçenekten hangisi ve neden? Bir gerekçe cümlesi ve bir sınır cümlesi yaz (`odevler/odev-06/` altında bir not dosyasına). A'yı seçtiysen ilk `jsonb` sütununu şimdi ekle.
+**Senin projende:** Üç seçenekten hangisi ve neden? Bir gerekçe cümlesi ve bir sınır cümlesi yaz (`ai/` klasöründe bir not dosyasına). A'yı seçtiysen ilk `jsonb` sütununu şimdi ekle.
 
 ## 6. Hile kâğıdı
 

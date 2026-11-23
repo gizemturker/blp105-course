@@ -45,7 +45,7 @@ SELECT count(*) FROM operators;  --> 10
 
 `\dt` tabloları listeler, `\d robots` tek bir tablonun sütunlarını ve kısıtlarını gösterir. Bu hafta `\d` çok işimize yarayacak.
 
-**Senin projende:** kendi projen için boş bir veritabanı aç: `createdb benim_projem` (Ödev 4'te kullandığın adla aynı olsun).
+**Senin projende:** kendi projen için boş bir veritabanı aç: `createdb benim_projem`.
 
 ## 2. DDL: tablo, tip, anahtar, kısıt
 
@@ -391,7 +391,7 @@ ERROR:  relation "maintenance_log2" already exists
 
 Şema bir dosyada (migration), örnek veri başka bir dosyada (seed) durur: şemayı değiştirmek için veriyi silmek zorunda kalmazsın.
 
-**Senin projende:** (1) ERD'ndeki bir ana tablo ve bağlı tablo için silme davranışını seç ve **bir cümleyle gerekçelendir** (Ödev 4 Bölüm 3'ün ham maddesi). (2) `migrations/001_create_tables.sql` dosyasını aç, başlık yorumunu yaz, `DROP TABLE IF EXISTS` satırlarını (önce bağlı tablo!) ekle, en az iki bağlı tabloyu `CREATE TABLE` ile kur: PK, FK, 3 `NOT NULL`, 1 `UNIQUE`, 1 `CHECK`, 1 `DEFAULT`. (3) `odevler/odev-04/kisit-denemeleri.sql` dosyasına 4 bilinçli ihlali ve aldığın hata mesajlarını yorum olarak yaz.
+**Senin projende:** (1) ERD'ndeki bir ana tablo ve bağlı tablo için silme davranışını seç ve **bir cümleyle gerekçelendir** (raporundaki şema gerekçesinin ham maddesi). (2) `migrations/001_create_tables.sql` dosyasını aç, başlık yorumunu yaz, `DROP TABLE IF EXISTS` satırlarını (önce bağlı tablo!) ekle, en az iki bağlı tabloyu `CREATE TABLE` ile kur: PK, FK, 3 `NOT NULL`, 1 `UNIQUE`, 1 `CHECK`, 1 `DEFAULT`. (3) `denemeler/kisit-denemeleri.sql` dosyasına 4 bilinçli ihlali ve aldığın hata mesajlarını yorum olarak yaz.
 
 ## 3. Hile kâğıdı
 

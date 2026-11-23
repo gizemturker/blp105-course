@@ -62,8 +62,8 @@ Haftalık konular aşağıda, her haftanın ayrıntısı `weeks/week-NN/README.m
 | Bileşen | Ağırlık | İçerik |
 |---|---|---|
 | Ara sınav | %30 | Hafta 8, mini proje ve sunum |
-| Proje | %30 | 6 ödevin ortalaması (en düşük bir not atılır) |
-| Yarıyıl sonu | %40 | Ana proje (repo), final raporu ve final günü repodan sorulan soru |
+| Ödev | %20 | İki ödevin ortalaması |
+| Yarıyıl sonu | %50 | Ana proje (repo), final raporu ve final günü repodan sorulan soru |
 
 Yazılı sınav yok: sorgu yazar, şema kurar, sonra savunursun.
 

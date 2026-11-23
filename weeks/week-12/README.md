@@ -52,7 +52,7 @@ Projen çalışıyor; şimdi sistemi gerçek hayata yaklaştırıyorsun. [genisl
 
 ## Puanlama özeti
 
-100 puan, dönemin %40'ı. Ayrıntılı seviyeler: [RUBRIK.md](../../RUBRIK.md) Bölüm 3.
+100 puan, dönemin %50'si. Ayrıntılı seviyeler: [RUBRIK.md](../../RUBRIK.md) Bölüm 3.
 
 | Ölçüt | Puan |
 |---|---|
@@ -77,7 +77,7 @@ Ana proje teslimi
 
 ## Ağırlık
 
-Dönem notunun %40'ı. Ayrıntı: [SYLLABUS.md](../../SYLLABUS.md)
+Dönem notunun %50'si. Ayrıntı: [SYLLABUS.md](../../SYLLABUS.md)
 
 ## Sonrası
 

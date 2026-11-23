@@ -69,11 +69,11 @@ ERD ve normalizasyon planı
 
 ## Ödev
 
-Bu ödev henüz açılmadı, tarihi dersinde duyurulacak. Aktif ödev: [Ödev 1](../week-05/odev.md), son teslim 23 Ekim 2026 Cuma.
+**Ödev 2: JOIN, ERD ve normalizasyon** (100 puan). Yönerge: [odev.md](odev.md)
 
-**Ödev 3: ERD ve normalizasyon** (100 puan). Yönerge: [odev.md](odev.md)
-
-- PR ile teslim: branch `odev-03`, reviewer **gizemturker**
-- **Kâğıt rapor Hafta 8 dersinde elden teslim edilir**
+- Son teslim: Cuma 27 Kasım 2026, ders saatinden önce (09:00)
+- PR ile teslim: branch `odev-02`, reviewer **gizemturker**
+- **Kâğıt rapor aynı gün derste elden teslim edilir**
 
 Kurallar: [ODEVLER.md](../../ODEVLER.md), rubrik: [RUBRIK.md](../../RUBRIK.md)
+

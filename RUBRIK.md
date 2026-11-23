@@ -18,7 +18,7 @@ Puan hesabı: her ölçüt için `seviye çarpanı × ölçüt ağırlığı`, h
 
 ## 1. Haftalık Ödev Rubriği (Ödev 1-6, her biri 100 puan)
 
-Bu rubrik yedi notlu ödevin hepsinde aynıdır.
+Bu rubrik iki notlu ödevin hepsinde aynıdır.
 
 ### Ölçüt A: Doğruluk (35 puan)
 
@@ -132,7 +132,7 @@ Sunum sırasında sorulan sorulara verilen cevaplar.
 
 ---
 
-## 3. Final Rubriği (Hafta 12, 100 puan, dönemin %40'ı)
+## 3. Final Rubriği (Hafta 12, 100 puan, dönemin %50'si)
 
 Final üç parçadan oluşur: önceden teslim edilen proje reposu, `RAPOR.md` (ve çıktısı) ve final günü repodan sorulan bir soruya verilen 1-2 dakikalık cevap. Slayt ve sunum yoktur. Ayrıntı: [weeks/week-12/README.md](weeks/week-12/README.md)
 

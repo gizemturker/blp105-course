@@ -13,7 +13,7 @@ Kurallar:
 - Hata mesajını silme, kopyala: hata mesajı bu föyün kanıtıdır.
 - Şeman çalışmıyorsa o hafta örnek veritabanında ilerle, kendi projene evde uygula. Hocaya söyle.
 
-Teslim edilecek kanıtlar her labın sonunda yazılıdır. Ödevin tamamı: [odev.md](odev.md)
+Teslim edilecek kanıtlar her labın sonunda yazılıdır. Bu hafta ayrı ödev yok, kanıtların final projenin parçasıdır
 
 Ortam kontrolü (herkes, 2 dk):
 
@@ -29,7 +29,7 @@ Takıldıysan: veritabanı yoksa terminalde `createdb benim_projem` (kendi adın
 
 ## Lab 1: İlk iki tablo ve dört kısıt ihlali (35 dk)
 
-Dosya: `odevler/odev-04/kisit-denemeleri.sql`
+Dosya: `denemeler/kisit-denemeleri.sql`
 
 ### 1.1. İki bağlı tablo kur (12 dk)
 
