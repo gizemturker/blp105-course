@@ -19,7 +19,7 @@ Bu hafta birden fazla tablo var. Önce tabloları tanı:
 
 Her sorgunun altına bir yorum cümlesi yaz (geçen haftaki kural devam ediyor).
 
-Teslim: sorgular `odevler/odev-02/cozumler.sql` dosyasına. Ödevin tamamı: [odev.md](odev.md)
+Bu föy teslim edilmez, kendi çalışman içindir. Benzer sorular Ödev 2'nin 1. bölümünde: [Ödev 2](../week-07/odev.md)
 
 ---
 

@@ -36,29 +36,29 @@ Her hafta klasöründe şunları bulursun:
 
 Bu dönem ders **12 hafta** işlenir.
 
-| Hafta | Konu | Kilometre taşı | Durum |
-|---|---|---|---|
-| 1 | [Algoritmik düşünme: problemden adıma](weeks/week-01/README.md) | GitHub hesabı | Yayında |
-| 2 | [Döngüler ve temel algoritmalar](weeks/week-02/README.md) | - | Yayında |
-| 3 | [Veritabanı temel kavramları ve mimari](weeks/week-03/README.md) | Kura ve proje reposu | Yayında |
-| 4 | [Ortam kurulumu, SELECT ve WHERE](weeks/week-04/README.md) | İlk sorgular | Yayında |
-| 5 | [SQL fonksiyonları ve gruplama (GROUP BY)](weeks/week-05/README.md) | **Ödev 1** | Yayında |
-| 6 | [Çoklu tablo sorguları (JOIN)](weeks/week-06/README.md) | JOIN sorguları | Yayında |
-| 7 | [E-R modeli ve normalizasyon](weeks/week-07/README.md) | ERD ve normalizasyon planı | Yakında |
-| 8 | [Ara sınav, mini proje sunumu](weeks/week-08/README.md) | Veri hikayesi, ERD, plan | Yakında |
-| 9 | [DDL: tablolar, anahtarlar ve kısıtlar](weeks/week-09/README.md) | Şema (`CREATE TABLE`) | Yakında |
-| 10 | [DML, transaction ve alt sorgular](weeks/week-10/README.md) | Veriyi şemaya taşıma | Yakında |
-| 11 | [Görünümler, güvenlik ve YZ bileşeni](weeks/week-11/README.md) | Görünümler, roller, YZ bileşeni | Yakında |
-| 12 | [Final: jüri önünde sunumlar](weeks/week-12/README.md) | Ana proje teslimi | Yakında |
+| Hafta | Konu | İşlenen başlıklar | Kilometre taşı | Durum |
+|---|---|---|---|---|
+| 1 | [Algoritmik düşünme: problemden adıma](weeks/week-01/README.md) | Algoritma, sözde kod ve akış şeması, Python değişken/girdi-çıktı, if-elif-else | GitHub hesabı | Yayında |
+| 2 | [Döngüler ve temel algoritmalar](weeks/week-02/README.md) | for/while, liste, filtreleme, toplam-ortalama-en büyük-sayma | - | Yayında |
+| 3 | [Veritabanı temel kavramları ve mimari](weeks/week-03/README.md) | Dosya tabanlı sistem sorunları, ilişkisel model, SQL alt dilleri (DQL/DDL/DML/DCL/TCL), istemci-sunucu, YZ'de veritabanı | Kura ve proje reposu | Yayında |
+| 4 | [Ortam kurulumu, SELECT ve WHERE](weeks/week-04/README.md) | SELECT/FROM/AS, WHERE, BETWEEN/IN/LIKE/ILIKE, ORDER BY/LIMIT/OFFSET/DISTINCT, Türkçe sıralama (COLLATE) | İlk sorgular | Yayında |
+| 5 | [SQL fonksiyonları ve gruplama (GROUP BY)](weeks/week-05/README.md) | COUNT/SUM/AVG/MIN/MAX, GROUP BY ve HAVING, NULL, COALESCE/NULLIF, tarih fonksiyonları, CASE WHEN | **Ödev 1** | Yayında |
+| 6 | [Çoklu tablo sorguları (JOIN)](weeks/week-06/README.md) | INNER/LEFT/RIGHT/FULL/CROSS JOIN, self join, JOIN ile GROUP BY, satır çoğalması (fan-out) | JOIN sorguları | Yayında |
+| 7 | [E-R modeli ve normalizasyon](weeks/week-07/README.md) | Varlık, nitelik, kardinalite, zayıf varlık, Chen ve crow's foot, ERD'den şemaya, Mermaid; anomaliler, 1NF-2NF-3NF, BCNF, denormalizasyon | ERD ve normalizasyon planı | Yayında |
+| 8 | [Ara sınav, mini proje sunumu](weeks/week-08/README.md) | Veri hikayesi, ERD ve plan sunumu, canlı sorular (sınav değil, savunma) | Veri hikayesi, ERD, plan | Yayında |
+| 9 | [DDL: tablolar, anahtarlar ve kısıtlar](weeks/week-09/README.md) | CREATE/ALTER/DROP TABLE, veri tipleri, IDENTITY, PRIMARY/FOREIGN KEY ve silme davranışları, NOT NULL/UNIQUE/CHECK/DEFAULT, migration | Şema (`CREATE TABLE`) | Yayında |
+| 10 | [DML, transaction ve alt sorgular](weeks/week-10/README.md) | INSERT/UPDATE/DELETE, güvenli DML, UPSERT, \copy; BEGIN/COMMIT/ROLLBACK/SAVEPOINT, ACID; skaler alt sorgu, IN/EXISTS, CTE | Veriyi şemaya taşıma | Yayında |
+| 11 | [Görünümler, güvenlik ve YZ bileşeni](weeks/week-11/README.md) | VIEW, indeks, EXPLAIN; roller, GRANT/REVOKE, SQL injection, yedekleme; jsonb, pgvector veya text-to-SQL | Görünümler, roller, YZ bileşeni | Yayında |
+| 12 | [Final: repo, rapor ve repo sorusu](weeks/week-12/README.md) | Repo önceden teslim, `RAPOR.md` ve çıktısı, final günü repodan bir soru, genişletme kartları | Ana proje teslimi | Yakında |
 
 ## Ödevler
 
-Dönem boyunca **6 notlu ödev** var. Her ödev iki parça halinde teslim edilir:
+Dönem boyunca **2 notlu ödev** var. Her ödev iki parça halinde teslim edilir:
 
 1. **GitHub'da PR:** kendi reponda `odev-NN` branch'ini açar, çalışır, PR açar ve beni reviewer eklersin
 2. **Kâğıt rapor:** tek sayfalık raporu teslim günündeki derste elden verirsin
 
-**Sıradaki: [Ödev 1, ilk beş haftanın tamamı](weeks/week-05/odev.md). Son teslim 23 Ekim 2026 Cuma, ders saatinden önce.**
+**Sıradaki: [Ödev 2, JOIN, ERD ve normalizasyon](weeks/week-07/odev.md). Son teslim 27 Kasım 2026 Cuma, ders saatinden önce.** Ödev 1 teslim edildi.
 
 Ayrıntı: [ODEVLER.md](ODEVLER.md), notlandırma: [RUBRIK.md](RUBRIK.md), şablonlar: [templates/](templates/README.md)
 

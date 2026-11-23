@@ -1,72 +1,81 @@
-# Ödev 3: ERD ve normalizasyon
+# Ödev 2: JOIN, ERD ve Normalizasyon
 
-> **Bu ödev henüz açılmadı.** Konusu belli, tarihi değil. Şu an aktif olan tek ödev [Ödev 1](../week-05/odev.md), son teslim 23 Ekim 2026 Cuma. Buradaki yönergeyi şimdiden okuyabilirsin.
+**Teslim:** Cuma 27 Kasım 2026, saat 09:00'dan önce. GitHub'da PR (branch `odev-02`, reviewer: gizemturker). Kâğıt rapor aynı gün derste elden.
 
-Hafta 7 konusu. 100 puan.
+## Senaryo
 
-**Son teslim: tarih sonra duyurulacak, ders saatinden önce GitHub'da. Kâğıt rapor ara sınav haftasındaki derste.**
+Bir lojistik deposunda robot filosu çalışıyor. Filo sorumlusu pazartesi toplantısına hazırlanıyor ve senden şunları istiyor: hangi robotun hangi operatöre bağlı olduğu, hiç görev almamış robotlar, bataryalardaki toplam şarj ve robot başına görev sayısı. Veriler `robot_fleet` veritabanında. Sorguları yaz, her sonucun ne anlama geldiğini bir cümleyle açıkla.
 
-## Amaç
+Sonra sıra kendi projene geliyor: vizede sunduğun ERD'yi bu derste öğrendiklerinle düzeltip kesinleştireceksin.
 
-Kendi senaryonu bir E-R modeline dönüştürmek ve o modeli 3NF'ye taşımak. Bu ödev aynı zamanda **ara sınav hazırlığın.**
+## Hazırlık
 
-## Yapılacaklar
-
-### Bölüm 1: ERD (zorunlu)
-
-`docs/erd.md` dosyasında Mermaid ile ERD'ni çiz. GitHub bunu otomatik render eder, yani PR'da diyagramı görebileceğim.
-
-```mermaid
-erDiagram
-    OPERATORS ||--o{ ROBOTS : "sorumlu"
-    ROBOTS ||--o{ MISSIONS : "yürütür"
-    ROBOTS {
-        int id PK
-        text name
-        text operator_name FK
-    }
+```bash
+psql -d robot_fleet -f data/robot_fleet.sql
 ```
 
-ERD'nde olması gerekenler:
+Tablolar: `operators`, `robots`, `missions`. `\d robots` ile sütunlara bak.
 
-- [ ] Bütün varlıklar (en az 3 tablo)
-- [ ] Her varlığın nitelikleri, veri tipleriyle
-- [ ] Birincil anahtarlar (PK) işaretli
-- [ ] Yabancı anahtarlar (FK) işaretli
-- [ ] Her ilişkinin kardinalitesi (1-1, 1-N, M-N)
-- [ ] M-N ilişkin varsa ara tablosu
+## Bölüm 1: Filo soruları (50 puan)
 
-### Bölüm 2: Normalizasyon raporu (zorunlu)
+Ders reposundaki şablonu (`weeks/week-07/sorgular-sablonu.sql`) kendi reponda `odevler/odev-02/sorgular.sql` olarak kopyala. Her sorgunun altına sonucu açıklayan **tek cümlelik** yorum yaz (kaç satır döndü, neden). Çıktını görmeden yorum yazma.
 
-`docs/normalizasyon.md` dosyasında:
+| No | İstek | Puan |
+|---|---|---|
+| 1 | Her robotun adı, operatör adı ve operatörün telefonu (`INNER JOIN`). | 8 |
+| 2 | Aynı liste, ama **bütün robotlar** görünsün (`LEFT JOIN`). 1. sorguyla satır sayısını karşılaştır, kim kayboldu? | 8 |
+| 3 | Hiç görev almamış robotların adı ve modeli. | 10 |
+| 4 | Görevi olan robotların toplam batarya seviyesi. Önce `robots` ile `missions`'ı birleştirip `sum()` al, sonra aynı toplamı JOIN kullanmadan doğru hesapla. İki sonucu karşılaştır, farkı açıkla. | 12 |
+| 5 | Robot başına görev sayısı, hiç görevi olmayanlar 0 görünsün. Aynı sorguda `count(*)` ve `count(m.id)` yan yana olsun. Hangi robotlarda ikisi farklı? | 12 |
 
-- [ ] **Başlangıç hali:** ham CSV'nde hangi sütunlar vardı? (tek tablo olarak yaz)
-- [ ] **Anomaliler:** bu tek tabloda hangi ekleme, güncelleme ve silme anomalileri olurdu? Her biri için somut bir örnek ver
-- [ ] **Fonksiyonel bağımlılıklar:** hangi sütun hangisini belirliyor? (`siparis_id → musteri_adi` gibi)
-- [ ] **1NF, 2NF, 3NF adımları:** her adımda hangi tabloyu neden böldün?
-- [ ] **Bilinçli denormalizasyon:** bıraktığın bir tekrar varsa gerekçesi
+İpuçları: sütun adlarını tablo takma adıyla yaz (`r.name`, `m.id`). Eşleşmeyen kayıt arıyorsan `LEFT JOIN` ve sağ tablonun anahtarında `IS NULL`.
 
-### Bölüm 3: Anahtar tartışması (zorunlu, kısa)
+## Bölüm 2: Kendi projen (30 puan)
 
-Ders veritabanında `operators` tablosunun birincil anahtarı doğrudan **isim** (`operator_name`). Bu bir natural key.
+Kuradan çıkan projenin `SCENARIO.md` dosyasındaki veri hikâyesi ve vizedeki ERD'n başlangıç noktan. Aşağıdakileri reponun `README.md` dosyasında "Veri Modeli" başlığı altında topla.
 
-Raporunda iki soruyu cevapla:
+### 2.1 Güncel ERD (12 puan)
 
-1. Aynı isimde ikinci bir operatör işe alınırsa ne olur?
-2. Kendi projende natural key mi yoksa surrogate key (`id`) mi kullanacaksın, neden?
+Mermaid `erDiagram` ile çiz. En az 3 tablo; her tabloda sütun adı, veri tipi, `PK` ve `FK` işaretleri; her ilişkinin kardinalitesi (1-1, 1-N, M-N; M-N varsa ara tablo) ve katılımı (zorunlu mu, isteğe bağlı mı). ERD'nin altına ilişki başına **bir cümle** yaz: "Bir X, en az/en çok ... Y'ye sahiptir; bir Y, ... X'e aittir."
+
+Çizgi uçları: `||` tam bir (zorunlu), `o|` sıfır veya bir, `}o` sıfır veya çok, `}|` bir veya çok.
+
+### 2.2 Normalizasyon notu (10 puan)
+
+En fazla yarım sayfa, tablo biçiminde: tablo, neden ayrıldı veya neden ayrılmadı (hangi sütun hangisini belirliyor?), hangi form (1NF / 2NF / 3NF). Üç formdan her biri için kendi tablolarından somut bir örnek ver.
+
+### 2.3 İki JOIN sorusu (8 puan)
+
+Şema henüz kurulmadı, sorguları çalıştırman gerekmiyor. Her soru için: Türkçe soru cümlesi, hangi tablo ve sütunlar üzerinden birleşeceği (`a.sutun = b.sutun`), hangi JOIN türü ve neden. Biri eşleşmeyen kayıtları bulan (`LEFT JOIN`) bir soru olsun.
+
+Bu bölüm final projenin ilk adımıdır: buradaki ERD, dönemin devamında kuracağın şemanın temeli olacak.
+
+## Bölüm 3: Kâğıt rapor (20 puan)
+
+`templates/odev-rapor-sablonu.md` şablonunu kullan. Üst bilgileri ve YZ beyanını şablondaki gibi doldur. Gövdede şablonun 1-4. bölümleri yerine yalnızca şu iki soruyu yanıtla. Toplam bir sayfa:
+
+1. **Fan-out:** 4. soruda toplam kaçtan kaça çıktı? Hangi robot kaç kez sayıldı? Gerçek bir raporda bu hata ne yanlışa yol açar?
+2. **En zor karar:** Kendi ERD'nde en çok düşündüğün tek karar neydi (bir tabloyu bölmek, bir ilişkinin kardinalitesi, anahtar seçimi)? Hangi seçenekler arasında kaldın, neden birini seçtin?
 
 ## Teslim
 
 | Ne | Nerede |
 |---|---|
-| ERD | `docs/erd.md` |
-| Normalizasyon raporu | `docs/normalizasyon.md` |
-| Rapor (dijital) | `odevler/odev-03/rapor.md` |
-| PR | Branch `odev-03`, reviewer: gizemturker |
-| **Rapor (kâğıt)** | **Hafta 8 dersinde elden** |
+| Sorgular ve yorumlar | `odevler/odev-02/sorgular.sql` |
+| ERD, normalizasyon notu, JOIN soruları | `README.md` ("Veri Modeli") |
+| Rapor (dijital) | `odevler/odev-02/rapor.md` |
+| PR | Branch `odev-02`, reviewer: gizemturker, en az 3 commit |
+| Rapor (kâğıt) | Cuma 27 Kasım derste, elden |
 
-## Değerlendirme
+Kopya ve YZ kuralları ODEVLER.md'deki gibidir.
 
-[RUBRIK.md bölüm 1](../../RUBRIK.md). Bu ödevde "Doğruluk" ölçütü ERD'nin ve normalizasyon adımlarının doğruluğu olarak okunur.
+## Notlandırma
 
-> Bu ödev ara sınavının temelidir. Hafta 8'de bu ERD'yi savunacaksın.
+| Bölüm | Puan |
+|---|---|
+| 1. Filo soruları (5 sorgu ve yorumları) | 50 |
+| 2. Kendi projen (ERD, normalizasyon, JOIN soruları) | 30 |
+| 3. Kâğıt rapor | 20 |
+| **Toplam** | **100** |
+
+Kâğıt rapor derste teslim edilmezse toplamdan %25 kesilir. Geç teslimde 24 saate kadar %20, 24-72 saat arası %40 kesilir; 72 saatten sonra ödev kabul edilmez.

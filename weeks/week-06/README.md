@@ -81,8 +81,5 @@ JOIN sorguları
 
 ## Ödev
 
-Bu ödev henüz açılmadı, tarihi dersinde duyurulacak. Aktif ödev: [Ödev 1](../week-05/odev.md), son teslim 23 Ekim 2026 Cuma.
+Bu haftanın ayrı bir ödevi yok. Konu, Ödev 2'nin 1. bölümünde ölçülür: [Ödev 2](../week-07/odev.md).
 
-**Ödev 2: JOIN.** Yönerge: [odev.md](odev.md)
-
-PR ile teslim + kâğıt rapor derste. Kurallar: [ODEVLER.md](../../ODEVLER.md), rubrik: [RUBRIK.md](../../RUBRIK.md)

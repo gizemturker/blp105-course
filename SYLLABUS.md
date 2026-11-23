@@ -27,7 +27,24 @@ Bu çıktılar araçtan bağımsız yazıldı. PostgreSQL bu dönemki aracımız
 
 Haftada 2 saat ders ve 2 saat laboratuvar, **12 hafta**. Laboratuvar dersin devamı olarak aynı hafta içinde uygulamadır. İlk iki hafta algoritmik düşünme ve Python'la for/if tekrarına ayrılır, veritabanı konuları Hafta 3'ten başlar.
 
-Haftalık konu listesi için [README.md](README.md) tablosuna bak.
+Haftalık konular aşağıda, her haftanın ayrıntısı `weeks/week-NN/README.md` içinde.
+
+### Haftalık konular
+
+| Hafta | Konu | İşlenen başlıklar |
+|---|---|---|
+| 1 | Algoritmik düşünme: problemden adıma | Algoritma, sözde kod ve akış şeması, Python değişken/girdi-çıktı, if-elif-else |
+| 2 | Döngüler ve temel algoritmalar | for/while, liste, filtreleme, toplam-ortalama-en büyük-sayma |
+| 3 | Veritabanı temel kavramları ve mimari | Dosya tabanlı sistem sorunları, ilişkisel model, SQL alt dilleri (DQL/DDL/DML/DCL/TCL), istemci-sunucu, YZ'de veritabanı |
+| 4 | Ortam kurulumu, SELECT ve WHERE | SELECT/FROM/AS, WHERE, BETWEEN/IN/LIKE/ILIKE, ORDER BY/LIMIT/OFFSET/DISTINCT, Türkçe sıralama (COLLATE) |
+| 5 | SQL fonksiyonları ve gruplama (GROUP BY) | COUNT/SUM/AVG/MIN/MAX, GROUP BY ve HAVING, NULL, COALESCE/NULLIF, tarih fonksiyonları, CASE WHEN |
+| 6 | Çoklu tablo sorguları (JOIN) | INNER/LEFT/RIGHT/FULL/CROSS JOIN, self join, JOIN ile GROUP BY, satır çoğalması (fan-out) |
+| 7 | E-R modeli ve normalizasyon | Varlık, nitelik, kardinalite, zayıf varlık, Chen ve crow's foot, ERD'den şemaya, Mermaid; anomaliler, 1NF-2NF-3NF, BCNF, denormalizasyon |
+| 8 | Ara sınav, mini proje sunumu | Veri hikayesi, ERD ve plan sunumu, canlı sorular (sınav değil, savunma) |
+| 9 | DDL: tablolar, anahtarlar ve kısıtlar | CREATE/ALTER/DROP TABLE, veri tipleri, IDENTITY, PRIMARY/FOREIGN KEY ve silme davranışları, NOT NULL/UNIQUE/CHECK/DEFAULT, migration |
+| 10 | DML, transaction ve alt sorgular | INSERT/UPDATE/DELETE, güvenli DML, UPSERT, \copy; BEGIN/COMMIT/ROLLBACK/SAVEPOINT, ACID; skaler alt sorgu, IN/EXISTS, CTE |
+| 11 | Görünümler, güvenlik ve YZ bileşeni | VIEW, indeks, EXPLAIN; roller, GRANT/REVOKE, SQL injection, yedekleme; jsonb, pgvector veya text-to-SQL |
+| 12 | Final: repo, rapor ve repo sorusu | Repo önceden teslim, `RAPOR.md` ve çıktısı, final günü repodan bir soru (1-2 dk cevap), genişletme kartları |
 
 ### Dönem akışı
 
@@ -38,15 +55,15 @@ Haftalık konu listesi için [README.md](README.md) tablosuna bak.
 | 7 | Tasarım | Kendi senaryonun E-R modeli ve normalizasyonu |
 | 8 | Ara değerlendirme | Mini proje sunumu |
 | 9-11 | Kurma | Şemayı kurma, veriyi taşıma, görünüm, güvenlik, YZ bileşeni |
-| 12 | Teslim | Jüri önünde final sunumu |
+| 12 | Teslim | Repo, rapor ve final günü repo sorusu |
 
 ## Değerlendirme
 
 | Bileşen | Ağırlık | İçerik |
 |---|---|---|
 | Ara sınav | %30 | Hafta 8, mini proje ve sunum |
-| Proje | %30 | 6 ödevin ortalaması (en düşük bir not atılır) |
-| Yarıyıl sonu | %40 | Ana proje ve sektör jürisi önünde 5 dakikalık sunum |
+| Ödev | %20 | İki ödevin ortalaması |
+| Yarıyıl sonu | %50 | Ana proje (repo), final raporu ve final günü repodan sorulan soru |
 
 Yazılı sınav yok: sorgu yazar, şema kurar, sonra savunursun.
 
