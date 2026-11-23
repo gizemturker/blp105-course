@@ -75,3 +75,56 @@ Kod, tablo ve sütun adları İngilizce yazılır: sektördeki repoların çoğu
 ## Erişilebilirlik
 
 Her haftanın slaytları, o haftanın klasöründe **metin sürümü** olarak da yayımlanır (`slides-text.md`). Ekran okuyucuyla okunabilir, tarayıcıda büyütülebilir. Görme, işitme ya da başka bir nedenle farklı bir düzenlemeye ihtiyacın varsa derse gelmeden bana yazman yeterli, birlikte planlarız.
+
+## Veri Modeli
+
+### 2.1 Güncel ERD
+
+Vizedeki başlangıç şeması normalizasyon kurallarına göre güncellenmiştir: `hastalar` tablosundaki çok değerli metin alanı (`kronik_hastalik`) 1NF gereği ayrı bir `hasta_kronik_hastaliklar` tablosuna taşınmış ve `oneriler` tablosundaki geçişli bağımlılık (`talep_id` sütununun hem `oneriler` hem de `llm_cagri_loglari` üzerinde tekrarlanması) 3NF gereği temizlenmiştir.
+
+```mermaid
+erDiagram
+    HASTALAR ||--o{ HASTA_KRONIK_HASTALIKLAR : "sahiptir"
+    HASTALAR ||--o{ ONERI_TALEPLERI : "olusturur"
+    ONERI_TALEPLERI ||--|{ LLM_CAGRI_LOGLARI : "islenir"
+    LLM_CAGRI_LOGLARI ||--o| ONERILER : "uretir"
+
+    HASTALAR {
+        int hasta_id PK
+        varchar ad_soyad
+        int yas
+        varchar cinsiyet
+        datetime kayit_tarihi
+    }
+
+    HASTA_KRONIK_HASTALIKLAR {
+        int kayit_id PK
+        int hasta_id FK
+        varchar hastalik_adi
+    }
+
+    ONERI_TALEPLERI {
+        int talep_id PK
+        int hasta_id FK
+        text sikayet_veya_hedef
+        datetime talep_tarihi
+    }
+
+    LLM_CAGRI_LOGLARI {
+        int cagri_id PK
+        int talep_id FK
+        varchar kullanilan_model
+        int input_tokens
+        int output_tokens
+        decimal sure_saniye
+        decimal maliyet_usd
+        datetime cagri_zamani
+    }
+
+    ONERILER {
+        int oneri_id PK
+        int cagri_id FK
+        text oneri_metni
+        varchar kategori
+        datetime olusturulma_tarihi
+    }
