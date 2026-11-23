@@ -134,7 +134,17 @@ Sunum sırasında sorulan sorulara verilen cevaplar.
 
 ## 3. Final Rubriği (Hafta 12, 100 puan, dönemin %40'ı)
 
-Jüri önünde 5 dakikalık sunum ve proje reposu.
+Final üç parçadan oluşur: önceden teslim edilen proje reposu, `RAPOR.md` (ve çıktısı) ve final günü repodan sorulan bir soruya verilen 1-2 dakikalık cevap. Slayt ve sunum yoktur. Ayrıntı: [weeks/week-12/README.md](weeks/week-12/README.md)
+
+| Ölçüt | Puan | Ne bakılır |
+|---|---|---|
+| A. Şema ve veri | 20 | Migration çalışıyor, PK/FK/NOT NULL/CHECK, gerçek veri, 3NF gerekçesi |
+| B. Analiz sorguları | 15 | En az 10 sorgu; JOIN, gruplama, alt sorgu; iş sorusuna cevap |
+| C. View, indeks, rol | 10 | En az 2 view, 1 gerekçeli indeks, 1 rol |
+| D. YZ bileşeni | 10 | `jsonb`, pgvector veya text-to-SQL; neden seçildi, sınırı |
+| E. Genişletme kartları (2 adet) | 15 | Her kart 7,5 puan: dosya çalışıyor, kanıt var |
+| F. Rapor ve README | 10 | 5 başlık eksiksiz, repodaki `RAPOR.md` ile çıktı aynı, README'den proje kurulabiliyor |
+| G. Repo sorusu cevabı | 20 | 1-2 dakika; kendi işini anlıyor mu |
 
 ### Ölçüt A: Şema ve veri (20 puan)
 
@@ -142,35 +152,49 @@ Jüri önünde 5 dakikalık sunum ve proje reposu.
 |---|---|---|---|
 | Migration dosyaları çalışıyor, kısıtlar (PK, FK, NOT NULL, CHECK) yerinde, gerçek veri yüklenmiş, 3NF gerekçelendirilmiş | Şema kurulu, bazı kısıtlar eksik | Şema var ama kısıtsız, veri az | Şema çalışmıyor |
 
-### Ölçüt B: Analiz sorguları (20 puan)
+### Ölçüt B: Analiz sorguları (15 puan)
 
 | 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
 |---|---|---|---|
 | En az 10 sorgu; JOIN, gruplama, alt sorgu çeşitliliği var; her sorgu bir iş sorusuna cevap veriyor | 7-9 sorgu, çeşitlilik sınırlı | 5-6 basit sorgu | 5'ten az |
 
-### Ölçüt C: Görünüm, indeks, güvenlik (15 puan)
+### Ölçüt C: View, indeks, rol (10 puan)
 
 | 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
 |---|---|---|---|
 | En az 2 view, 1 indeks (`EXPLAIN ANALYZE` çıktısıyla gerekçeli), 1 rol tanımı | Üçünden biri eksik veya gerekçesiz | Sadece biri var | Hiçbiri yok |
 
-### Ölçüt D: Yapay zeka bileşeni (15 puan)
+### Ölçüt D: Yapay zeka bileşeni (10 puan)
 
 | 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
 |---|---|---|---|
 | `jsonb`, pgvector veya text-to-SQL'den biri çalışır halde; neden bu bileşeni seçtiğini açıklıyor; sınırlarını biliyor | Bileşen var ama yüzeysel | Denenmiş ama çalışmıyor | Yok |
 
-### Ölçüt E: README ve sunulabilirlik (15 puan)
+### Ölçüt E: Genişletme kartları (15 puan, kart başına 7,5)
+
+Her kart ayrı değerlendirilir; iki kartın puanı toplanır. Kartlar: [weeks/week-12/genisletme-kartlari.md](weeks/week-12/genisletme-kartlari.md)
 
 | 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
 |---|---|---|---|
-| README'de problem, ERD, kurulum adımları, sorgu örnekleri, 90 saniyelik demo videosu ve "ne öğrendim" bölümü var. Repoyu ilk kez açan biri projeyi anlıyor | Çoğu var, demo videosu eksik | README kısa ve eksik | README boş veya şablon halinde |
+| Kartın teslim dosyaları eksiksiz ve çalışıyor; kanıt (çıktı, hata mesajı, süre farkı) var ve yorumlanmış | Dosyalar çalışıyor, kanıt var ama yorum yüzeysel | Dosya eksik ya da kısmen çalışıyor, kanıt zayıf | Kart seçilmiş ama dosya yok ya da çalışmıyor |
 
-### Ölçüt F: Sunum ve savunma (15 puan)
+### Ölçüt F: Rapor ve README (10 puan)
 
 | 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
 |---|---|---|---|
-| 5 dakikayı aşmıyor, problemi teknik olmayan birine anlatabiliyor, jüri sorularına gerekçeli cevap veriyor | Sunum düzgün, sorularda zorlanıyor | Süreyi aşıyor veya sunum dağınık | Sunmamış |
+| `RAPOR.md` beş başlığın hepsiyle eksiksiz, her iddianın yanında repodaki kanıt dosyası var, çıktı repodaki metinle aynı; README'de problem, ERD, kurulum adımları, sorgu örnekleri ve "ne öğrendim" var, repoyu ilk kez açan biri projeyi kurabiliyor | Rapor ve README büyük ölçüde tamam, küçük eksikler var | Bir başlık eksik ya da kanıt sütunu boş; README kısa | Rapor yok ya da README şablon hâlinde |
+
+> Repodaki `RAPOR.md` ile teslim edilen çıktı farklıysa repodaki metin geçerlidir ve fark bu ölçütten puan düşürür.
+
+### Ölçüt G: Repo sorusu cevabı (20 puan)
+
+Final günü reponun içinden bir soru sorulur (bir sorgun, bir kısıtın, bir indeksin, raporundaki bir cümle gibi); repoya bakarak 1-2 dakika cevap verirsin.
+
+| 4, Tam | 3, İyi | 2, Gelişmeli | 1, Yetersiz |
+|---|---|---|---|
+| Doğru ve gerekçeli cevap; kendi kodunun ne yaptığını ve neden öyle yazıldığını açıklıyor | Cevap doğru ama gerekçe eksik ya da yüzeysel | Cevap kısmen doğru, kendi işini açıklamakta zorlanıyor | Cevap yok ya da çalışmanın kendisine ait olduğu anlaşılmıyor |
+
+> "Bilmiyorum, şöyle araştırırdım" demek kısmi puan alır; uydurma cevap puan almaz.
 
 ### Dönem boyu commit geçmişi
 

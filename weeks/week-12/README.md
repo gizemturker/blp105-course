@@ -1,12 +1,18 @@
-# Hafta 12: Final, jüri önünde sunumlar
+# Hafta 12: Final, repo, rapor ve repo sorusu
 
 Durum: Yakında
 
 ## Bu hafta ne oluyor
 
-Dönemin son haftası. Her öğrenci projesini sektör jürisi önünde **5 dakikada** sunar. Jüri gün boyu salonda kalır ve herkesi dinler, önceden eleme yoktur.
+Dönemin son haftası. Final üç parçadan oluşur:
 
-## Teslim içeriği
+1. **Repo, önceden teslim:** Projen kendi GitHub reponda, final gününden önce tamamdır. Son teslim tarihi sonra duyurulacak.
+2. **Rapor:** Projen hakkında 2 sayfalık bir rapor yazar, `RAPOR.md` olarak repoya koyarsın ve çıktısını alıp getirirsin. Repodaki metin ile çıktı birebir aynı olmalıdır.
+3. **Final günü:** Repondan bir soru sorulur, sen 1-2 dakika cevap verirsin. Slayt ve video yok.
+
+Final tarihi 5-17 Aralık arasında ilan edilecek. Çıktının nereye ve ne zaman teslim edileceği de tarihle birlikte duyurulacak.
+
+## Teslim içeriği (repo)
 
 Projen kendi GitHub reponda, şunlar eksiksiz olacak:
 
@@ -19,19 +25,51 @@ Projen kendi GitHub reponda, şunlar eksiksiz olacak:
 - **İndeks:** en az 1 indeks ve gerekçesi (`EXPLAIN ANALYZE` çıktısıyla)
 - **Güvenlik:** en az 1 rol tanımı
 - **YZ bileşeni:** `jsonb`, pgvector veya text-to-SQL değerlendirmesi
-- **README:** problem, ERD, sorgu örnekleri, 90 saniyelik demo videosu veya GIF, "ne öğrendim" bölümü
+- **Genişletme kartları:** seçtiğin 2 kart, `genisletme/` klasöründe (aşağıya bak)
+- **`RAPOR.md`:** repo kökünde, aşağıdaki biçimde
+- **README:** problem, ERD, kurulum adımları, sorgu örnekleri, "ne öğrendim" bölümü ve seçtiğin kartlar
 
-## Sunum
+Yedek dosyaları (`.dump`) repoya girmez.
 
-- Süre: 5 dakika
-- Akış önerisi: problem (1 dk) → şema ve ERD (1,5 dk) → canlı sorgu (1,5 dk) → YZ bileşeni ve öğrendiklerin (1 dk)
-- Demo videon README'de hazır olacağı için canlı oturumda teknik aksaklıkla vakit kaybetmezsin
+## Rapor
+
+- **Uzunluk:** 2 sayfa A4. **Dosya:** repo kökünde `RAPOR.md`. **Şablon:** [templates/final-rapor-sablonu.md](../../templates/final-rapor-sablonu.md)
+- **Beş başlık:** problem; şema ve ERD açıklaması; genişletme kartları (kart başına "ne yaptım" ve "neyi kanıtlıyor", dosya yolu ve commit ile); YZ bileşeni ve sınırı; ne öğrendim.
+- **Kanıt sütunu:** raporda yazdığın her iddianın yanına, onu gösteren repo dosyasını yaz.
+- **Aynılık kuralı:** çıktı, repodaki `RAPOR.md` ile aynı metin olmak zorundadır. Kontrol derste yan yana bakarak yapılır: repodaki dosya ekranda, çıktı elinde. Fark çıkarsa repodaki metin geçerlidir ve fark puan düşürür.
+- Bu rapor, Ödev raporlarından ayrı bir belgedir.
+
+## Genişletme kartları
+
+Projen çalışıyor; şimdi sistemi gerçek hayata yaklaştırıyorsun. [genisletme-kartlari.md](genisletme-kartlari.md) içindeki altı karttan **iki tanesini** seç ve kendi projene uygula: güvenilir işlem, rapor katmanı, hız kanıtı, rol ve güvenlik, veri kalitesi, yedekle ve geri yükle. Kartların dosyaları repoda `genisletme/` klasörüne girer, kart seçimini README'ne yaz.
+
+## Final günü: repo sorusu
+
+- Soru **senin reposundan** sorulur, bu yüzden ezberlenemez. Repoya bakarak cevap verebilirsin.
+- Süre: cevap için 1-2 dakika.
+- Örnek soru türleri: bir sorgunun ne yaptığı ve hangi tabloyu hangisine bağladığı; bir kısıtı (`CHECK`, `FK`, `UNIQUE`) neden koyduğun ve olmasaydı ne olacağı; bir indeksi neden o sütuna koyduğun ve planın nasıl değiştiği; raporundaki bir cümleyi hangi dosyanın kanıtladığı; bir view'i silsen hangi sorgunun bozulacağı; bir `UPDATE`'i çalıştırmadan önce ne yapacağın; kartında karşılaştığın en büyük sorun ve çözümü; bir tabloya yeni sütun eklesen şemanın neresinin değişeceği.
+- Bilmiyorsan "bilmiyorum, şöyle araştırırdım" de: kısmi puan alır. Uydurma cevap puan almaz.
+
+## Puanlama özeti
+
+100 puan, dönemin %40'ı. Ayrıntılı seviyeler: [RUBRIK.md](../../RUBRIK.md) Bölüm 3.
+
+| Ölçüt | Puan |
+|---|---|
+| A. Şema ve veri | 20 |
+| B. Analiz sorguları | 15 |
+| C. View, indeks, rol | 10 |
+| D. YZ bileşeni | 10 |
+| E. Genişletme kartları (2 adet, kart başına 7,5) | 15 |
+| F. Rapor ve README | 10 |
+| G. Repo sorusu cevabı | 20 |
 
 ## Hazırlık ipuçları
 
-- Provanı Hafta 11 laboratuvarında yap
-- Jüri sektörden geliyor: teknik detaydan çok **hangi problemi çözdüğünü** anlat
-- Bir soruyu bilmiyorsan "bilmiyorum, şöyle araştırırdım" demek, uydurmaktan iyidir
+- Reponu ilk kez açan biri gibi oku: README'den projeyi kurabiliyor musun?
+- Raporda yazdığın her cümlenin yanında repodan bir dosya göster; bulamıyorsan cümleyi ya da dosyayı düzelt.
+- Kendi sorgularını, kısıtlarını ve indekslerini neden öyle yazdığını söyleyebilecek durumda ol.
+- Hafta 11 laboratuvarında view, indeks, rol ve YZ bileşeni parçalarını tamamla; kartlara erken başla.
 
 ## Kilometre taşı
 

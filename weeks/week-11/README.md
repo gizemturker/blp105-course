@@ -1,6 +1,6 @@
 # Hafta 11: Görünümler, güvenlik ve YZ bileşeni
 
-Durum: Yakında
+Durum: Yayında
 
 > Dönemin son teknik haftası. Projeni sunuma hazır hale getiren üç parça.
 

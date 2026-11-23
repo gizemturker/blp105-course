@@ -47,9 +47,9 @@ Bu dönem ders **12 hafta** işlenir.
 | 7 | [E-R modeli ve normalizasyon](weeks/week-07/README.md) | Varlık, nitelik, kardinalite, zayıf varlık, Chen ve crow's foot, ERD'den şemaya, Mermaid; anomaliler, 1NF-2NF-3NF, BCNF, denormalizasyon | ERD ve normalizasyon planı | Yayında |
 | 8 | [Ara sınav, mini proje sunumu](weeks/week-08/README.md) | Veri hikayesi, ERD ve plan sunumu, canlı sorular (sınav değil, savunma) | Veri hikayesi, ERD, plan | Yayında |
 | 9 | [DDL: tablolar, anahtarlar ve kısıtlar](weeks/week-09/README.md) | CREATE/ALTER/DROP TABLE, veri tipleri, IDENTITY, PRIMARY/FOREIGN KEY ve silme davranışları, NOT NULL/UNIQUE/CHECK/DEFAULT, migration | Şema (`CREATE TABLE`) | Yayında |
-| 10 | [DML, transaction ve alt sorgular](weeks/week-10/README.md) | INSERT/UPDATE/DELETE, güvenli DML, UPSERT, \copy; BEGIN/COMMIT/ROLLBACK/SAVEPOINT, ACID; skaler alt sorgu, IN/EXISTS, CTE | Veriyi şemaya taşıma | **Bu hafta** |
-| 11 | [Görünümler, güvenlik ve YZ bileşeni](weeks/week-11/README.md) | VIEW, indeks, EXPLAIN; roller, GRANT/REVOKE, SQL injection, yedekleme; jsonb, pgvector veya text-to-SQL | Görünümler, roller, YZ bileşeni | Yakında |
-| 12 | [Final: jüri önünde sunumlar](weeks/week-12/README.md) | 5 dakikalık proje sunumu, jüri, teslim içeriği | Ana proje teslimi | Yakında |
+| 10 | [DML, transaction ve alt sorgular](weeks/week-10/README.md) | INSERT/UPDATE/DELETE, güvenli DML, UPSERT, \copy; BEGIN/COMMIT/ROLLBACK/SAVEPOINT, ACID; skaler alt sorgu, IN/EXISTS, CTE | Veriyi şemaya taşıma | Yayında |
+| 11 | [Görünümler, güvenlik ve YZ bileşeni](weeks/week-11/README.md) | VIEW, indeks, EXPLAIN; roller, GRANT/REVOKE, SQL injection, yedekleme; jsonb, pgvector veya text-to-SQL | Görünümler, roller, YZ bileşeni | Yayında |
+| 12 | [Final: repo, rapor ve repo sorusu](weeks/week-12/README.md) | Repo önceden teslim, `RAPOR.md` ve çıktısı, final günü repodan bir soru, genişletme kartları | Ana proje teslimi | Yakında |
 
 ## Ödevler
 

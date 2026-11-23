@@ -44,7 +44,7 @@ Haftalık konular aşağıda, her haftanın ayrıntısı `weeks/week-NN/README.m
 | 9 | DDL: tablolar, anahtarlar ve kısıtlar | CREATE/ALTER/DROP TABLE, veri tipleri, IDENTITY, PRIMARY/FOREIGN KEY ve silme davranışları, NOT NULL/UNIQUE/CHECK/DEFAULT, migration |
 | 10 | DML, transaction ve alt sorgular | INSERT/UPDATE/DELETE, güvenli DML, UPSERT, \copy; BEGIN/COMMIT/ROLLBACK/SAVEPOINT, ACID; skaler alt sorgu, IN/EXISTS, CTE |
 | 11 | Görünümler, güvenlik ve YZ bileşeni | VIEW, indeks, EXPLAIN; roller, GRANT/REVOKE, SQL injection, yedekleme; jsonb, pgvector veya text-to-SQL |
-| 12 | Final: jüri önünde sunumlar | 5 dakikalık proje sunumu, jüri, teslim içeriği |
+| 12 | Final: repo, rapor ve repo sorusu | Repo önceden teslim, `RAPOR.md` ve çıktısı, final günü repodan bir soru (1-2 dk cevap), genişletme kartları |
 
 ### Dönem akışı
 
@@ -55,7 +55,7 @@ Haftalık konular aşağıda, her haftanın ayrıntısı `weeks/week-NN/README.m
 | 7 | Tasarım | Kendi senaryonun E-R modeli ve normalizasyonu |
 | 8 | Ara değerlendirme | Mini proje sunumu |
 | 9-11 | Kurma | Şemayı kurma, veriyi taşıma, görünüm, güvenlik, YZ bileşeni |
-| 12 | Teslim | Jüri önünde final sunumu |
+| 12 | Teslim | Repo, rapor ve final günü repo sorusu |
 
 ## Değerlendirme
 
@@ -63,7 +63,7 @@ Haftalık konular aşağıda, her haftanın ayrıntısı `weeks/week-NN/README.m
 |---|---|---|
 | Ara sınav | %30 | Hafta 8, mini proje ve sunum |
 | Proje | %30 | 6 ödevin ortalaması (en düşük bir not atılır) |
-| Yarıyıl sonu | %40 | Ana proje ve sektör jürisi önünde 5 dakikalık sunum |
+| Yarıyıl sonu | %40 | Ana proje (repo), final raporu ve final günü repodan sorulan soru |
 
 Yazılı sınav yok: sorgu yazar, şema kurar, sonra savunursun.
 
