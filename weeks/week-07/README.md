@@ -77,3 +77,5 @@ ERD ve normalizasyon planı
 
 Kurallar: [ODEVLER.md](../../ODEVLER.md), rubrik: [RUBRIK.md](../../RUBRIK.md)
 
+İsteğe bağlı tekrar (notsuz, teslim yok): [Hafta 4-7 tekrar föyü](tekrar-foyu.md)
+

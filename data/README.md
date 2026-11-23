@@ -58,6 +58,28 @@ llm_calls     (id PK, model_name, user_name, task_type,     12 satır
 - `cost_usd`: dolar
 - `task_type`: `summarize`, `code`, `classify`, `translate`, `chat`
 
+## llm_ops_tekrar (isteğe bağlı tekrar föyü)
+
+`llm_ops`'a benzer ama daha geniş, ayrı bir veri seti. [Hafta 4-7 tekrar föyü](../weeks/week-07/tekrar-foyu.md) için kullanılır; `llm_ops` ile karıştırma, ayrı bir veritabanına yüklenir.
+
+```bash
+createdb llm_ops_tekrar
+psql -d llm_ops_tekrar -f llm_ops_tekrar.sql
+```
+
+```
+model_catalog   (model_name PK, provider, price_per_1k_input_usd,     7 satır
+                 price_per_1k_output_usd, context_window)
+llm_calls       (id PK, model_name, user_name, task_type,           12 satır
+                 prompt_preview, prompt_tokens, completion_tokens,
+                 latency_ms, cost_usd, status, called_at)
+llm_evaluations (id PK, call_id → llm_calls.id, criterion, score)   26 satır
+```
+
+- `status`: `ok`, `error`, `rate_limited`
+- `criterion`: `dogruluk`, `faydalilik`, `guvenlik`; `score`: 1-5
+- Dosya, bağlı veritabanı `llm_ops_tekrar` değilse hiçbir şey yapmadan durur (yanlışlıkla `llm_ops` tablolarının silinmesini önler). Tekrar çalıştırılabilir.
+
 ## Verideki kasıtlı boşluklar ve tuzaklar
 
 Bu veri bilerek "kirli" bırakıldı, çünkü gerçek veri de kirli olur. Her boşluğun bir hikâyesi ve bir dersi var:
